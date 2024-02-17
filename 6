@@ -1,0 +1,13 @@
+import streamlit as st
+import pandas as pd
+st.title("Welcome to Our Car Sailing Web Page")
+st.sidebar.success("Name of pages")
+df = pd.DataFrame({'Car Name' : ['Lamborghini','Mercedes','Audi','Ferrari']})
+sel = st.selectbox("Which car you want to buy",df['Car Name'])
+i = st.button('click')
+#st.write("")
+if i:
+    st.write("You have selected : ",sel)
+    name = st.text_input("Write your name : ")
+    age = st.text_input("Write your age : ")
+    date = st.text_input("Write date of buy : ")
